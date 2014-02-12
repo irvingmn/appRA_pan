@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">tlapaleria</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="textoOpciones">Opciones</string>
+    <string-array name="Opciones">
+        <item >CERRADURAS</item>
+        <item >HERRAMIENTA</item>
+        <item >TUBO PVC</item>
+        <item >TUBO COBRE</item>
+        <item >MATERIAL ELECTRICO</item>
+        <item >PRODUCTOS DE LIMPIEZA</item>
+        <item >LLAVE PARA LAVABO</item>
+        <item >LLAVE PARA FREGADERO</item>
+      
+    </string-array>
+
+</resources>

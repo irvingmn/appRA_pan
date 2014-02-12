@@ -1,0 +1,204 @@
+<ScrollView 
+     android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:background="@drawable/fondo1">
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_marginLeft="107dp"
+        android:text="FACTURA" />
+    
+    <TextView 
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv1"
+        android:text="Nombre del cliente:"/>
+        
+    
+    <EditText 
+        android:id="@+id/ed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#008080"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv2"
+        />
+     <TextView 
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/ed1"
+        android:text="RFC del cliente:"/>
+     
+     <EditText 
+        android:id="@+id/ed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv3"
+        />
+     
+     <TextView 
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/ed2"
+        android:text="Direccion del cliente:"/>
+     
+     <EditText 
+        android:id="@+id/ed3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv4"
+        />
+     <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+           android:layout_below="@+id/ed3"
+         android:prompt="@string/textoOpciones"
+        android:entries="@array/Opciones"/>
+     
+     <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/sp1" >
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#FFFFFF"
+             android:textStyle="bold"
+            android:checked="true"
+            android:layout_below="@+id/sp1"
+            android:text="CREDITO" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#FFFFFF"
+             android:textStyle="bold"
+            android:checked="true"
+            android:layout_below="@+id/rb1"
+            android:text="EFECTIVO" />
+
+      
+    </RadioGroup>
+     
+     
+    <CheckBox
+        android:id="@+id/ch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:checked="true" 
+        android:layout_below="@+id/rg1"
+        android:text="COMPRA"/>
+
+
+
+    <CheckBox
+        android:id="@+id/ch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/ch1"
+        android:text="VENTA" />
+     
+     
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/ch2"
+        android:onClick="mostrar"
+        android:text="Mostrar Datos" />
+    
+    
+         <TextView 
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/b1"/>
+         
+         
+           <TextView 
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv5"/>
+             <TextView 
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv6"/>
+             
+                <TextView 
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv7"/>
+       
+                
+                <TextView 
+        android:id="@+id/tv9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv8"/>
+                
+                   <TextView 
+        android:id="@+id/tv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:layout_below="@+id/tv9"/>
+       
+</RelativeLayout>
+</ScrollView>

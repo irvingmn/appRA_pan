@@ -1,0 +1,95 @@
+    
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tec1"
+    android:fontFamily="Arial"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:textColor="#000000"
+    android:textSize="8dp"
+    android:textStyle="bold" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instututo Tecnologico de Gustavo A. Madero"
+        android:textColor="#FFFFFF"
+        android:fontFamily="Arial"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignRight="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="17dp"
+                android:text="Mision"
+                android:onClick="Mision" />
+        
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:onClick="Vision"
+        android:text="Vision"/>
+        
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignRight="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:onClick="Quienes"
+        android:text="Quienes Somos"/>
+    
+        
+     <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignRight="@+id/button3"
+        android:layout_below="@+id/button3"
+        android:onClick="Requisitos"
+        android:text="Requisitos" />
+      
+     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="16dp"
+        android:text="Bienvenido"
+        android:textColor="#FFFFFF"
+        android:fontFamily="Arial"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"/>
+     <DigitalClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+     
+   
+</RelativeLayout>
+</ScrollView>

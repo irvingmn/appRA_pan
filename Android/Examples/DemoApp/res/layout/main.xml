@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ScrollView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+        <LinearLayout 
+                      android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+                      
+            <!--  <Button android:id="@+id/startSimplePieExButton"
+                    style="@style/toc_button"
+                    android:text="A Pie Chart"
+                    android:enabled="false"/>-->
+            
+          <!--  <Button android:id="@+id/startSimpleXYExButton"
+                    style="@style/toc_button"
+                    android:text="A Simple XY Plot"
+                   android:enabled="false" />-->
+
+            <Button
+                android:id="@+id/startBarPlotExButton"
+                style="@style/toc_button"
+                android:layout_height="210dp"
+                android:text="Grafica de Barras y Liatas Desplegables"
+                android:textColor="#908765"
+                android:textSize="24sp" />
+            
+            <Button
+                android:id="@+id/startDynamicXYExButton"
+                style="@style/toc_button"
+                android:layout_height="216dp"
+                android:text="Grafica dinamic"
+                android:textColor="#908070"
+                android:textSize="24dp" />
+            
+            <!--  <Button android:id="@+id/startOrSensorExButton"
+                    style="@style/toc_button"
+                    android:text="Realtime Orientation Sensor Plot"/>-->
+            
+          <!--  <Button android:id="@+id/startTimeSeriesExButton"
+                    style="@style/toc_button"
+                    android:text="@string/ts_title"/>-->
+            
+           <!--   <Button android:id="@+id/startStepChartExButton"
+                    style="@style/toc_button"
+                    android:text="Step Chart"-->
+                    />
+           <!--   <Button android:id="@+id/startScrollZoomButton"
+                    style="@style/toc_button"
+                    android:text="Scroll and Zoom"-->
+                    />
+
+            
+            
+           <!--   <Button android:id="@+id/startXyScatterExButton"
+                    style="@style/toc_button"
+                    android:text="XY Scatter"
+                    android:enabled="true"/>-->
+            
+           <!-- <Button android:id="@+id/startXyScatterLineExButton"
+                    style="@style/toc_button"
+                    android:text="XY Scatter With Lines"
+                    android:enabled="false"/>-->
+            
+           <!-- <Button android:id="@+id/startXyRegionExampleButton"
+                    style="@style/toc_button"
+                    android:text="XYRegion Example"
+                    android:enabled="true"/>-->
+            
+          <!--   <Button android:id="@+id/startXyListViewExButton"
+                    style="@style/toc_button"
+                    android:text="ListView of XYPlots"
+                    android:enabled="true"/>
+            
+            <Button android:id="@+id/startDualScaleExampleButton"
+                    style="@style/toc_button"
+                    android:text="Dual Scale Example"
+                    android:enabled="false"/>
+            
+            <Button android:id="@+id/startXYPlotWithBgImgExample"
+                    style="@style/toc_button"
+                    android:text="XY Background Example"
+                    android:enabled="false"/> -->
+            </LinearLayout>
+    </ScrollView>
+ 
+</LinearLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/black_overlay"
+            android:visibility="visible"
+            android:focusable="false">
+
+        <ImageView
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:id="@+id/imageView"
+                android:src="@drawable/ring_clamp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/button_32x32_black"/>
+
+        <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView2"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="4dp"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/button_32x32_black">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_com"
+                    android:id="@+id/textView"
+                    android:textSize="20dp"
+                    android:typeface="monospace"
+                    android:textColor="#ff33b6f6"
+                    android:paddingLeft="4dp"
+                    android:paddingBottom="4dp"/>
+        </ScrollView>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="com"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_alignRight="@+id/scrollView2"
+                android:paddingLeft="8dp"
+                android:typeface="monospace"
+                android:textColor="#ff33b6f6"
+                android:textSize="28dip"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_32x32_black"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

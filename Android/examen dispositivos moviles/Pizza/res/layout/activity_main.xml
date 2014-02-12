@@ -1,0 +1,192 @@
+<ScrollView 
+    android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/pompi"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv1"
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#00BFFF"
+        android:text="@string/tamapizza"/>
+    
+     <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1" >
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#00BFFF"
+             android:textStyle="bold"
+            android:text="@string/chic" />
+         <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#00BFFF"
+             android:textStyle="bold"
+            android:text="@string/med" />
+          <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:textColor="#00BFFF"
+             android:textStyle="bold"
+            android:text="@string/gran" />
+          
+      
+    </RadioGroup>
+    
+     <TextView 
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:layout_below="@+id/rg1"
+         android:textStyle="bold"
+        android:text="@string/como"/>
+     
+      <CheckBox
+        android:id="@+id/ch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:checked="true" 
+        android:layout_below="@+id/tv2"
+        android:text="@string/oricoque"/>
+      
+       <CheckBox
+        android:id="@+id/ch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:checked="true" 
+        android:layout_below="@+id/ch1"
+        android:text="@string/oricoquechi"/>
+       
+       <CheckBox
+        android:id="@+id/ch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#FFFFFF"
+         android:textStyle="bold"
+        android:checked="true" 
+        android:layout_below="@+id/ch2"
+        android:text="@string/orisique"/>
+       
+        <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ch3"
+        android:textColor="#00BFFF"
+         android:textStyle="bold"
+        android:text="@string/ingre"/>
+        
+         <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:textStyle="bold"
+           android:layout_below="@+id/tv3"/>
+         
+     <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp1"
+        android:textColor="#00BFFF"
+         android:textStyle="bold"
+        android:text="@string/nompizza"/>
+     
+     <EditText 
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/tv4"
+         android:textColor="#000000"
+         android:textStyle="bold"
+        android:hint="@+id/este"
+        android:ems="20"/>
+     
+     <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et1"
+        android:textColor="#00BFFF"
+         android:textStyle="bold"
+        android:text="@string/tel"/>
+     
+      <EditText 
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:textStyle="bold"
+         android:layout_below="@+id/tv5"
+        android:hint="@+id/esnom"
+        android:ems="10"/>
+      
+      <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et2"
+        android:textColor="#00BFFF"
+         android:textStyle="bold"
+        android:text="@string/dir"/>
+      
+      <EditText 
+        android:id="@+id/et3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:textStyle="bold"
+         android:layout_below="@+id/tv6"
+        android:hint="@+id/esdir"
+        android:ems="20"/>
+      
+          <Button
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textColor="#000000"
+         android:textStyle="bold"
+        android:layout_below="@+id/et3"
+        android:onClick="lanzar"
+        android:text="@string/sa" />
+          
+          <ImageView 
+        android:id="@+id/imagen"
+        android:layout_width="100dp"
+        android:layout_height="100dp" 
+        android:layout_below="@+id/b1"
+        android:contentDescription="@string/imagen"
+        android:src="@drawable/pompi"
+        />
+    
+     
+      
+     
+
+</RelativeLayout>
+</ScrollView>

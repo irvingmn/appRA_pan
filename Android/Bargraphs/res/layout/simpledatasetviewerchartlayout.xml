@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:orientation="vertical"
+	android:layout_height="fill_parent">
+	<com.quinncurtis.chart2dandroid.examples.bargraphs.SimpleBarPlotChart
+		android:id="@+id/simplebarchart"
+		android:layout_gravity="center" android:layout_weight="0.8"
+		android:layout_width="fill_parent" android:layout_height="0dp" />
+	<com.quinncurtis.chart2dandroid.examples.bargraphs.SimpleHorizontalDatasetViewer1
+		android:id="@+id/simpledatasetviewer" android:layout_width="fill_parent"
+		android:layout_gravity="center" android:layout_weight="0.2"
+		android:layout_height="0dp" />
+</LinearLayout>

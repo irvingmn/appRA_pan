@@ -1,0 +1,63 @@
+# view AndroidManifest.xml #generated:72
+-keep class com.androidplot.demos.widget.DemoAppWidgetProvider { <init>(...); }
+
+# view res/layout/pie_chart.xml #generated:22
+-keep class com.androidplot.pie.PieChart { <init>(...); }
+
+# view res/layout/bar_plot_example.xml #generated:22
+# view res/layout/dual_scale_xy_plot_example.xml #generated:32
+# view res/layout/dual_scale_xy_plot_example.xml #generated:38
+# view res/layout/dynamicxyplot_example.xml #generated:21
+# view res/layout/listview_example_item.xml #generated:22
+# view res/layout/orientation_sensor_example.xml #generated:13
+# view res/layout/orientation_sensor_example.xml #generated:47
+# view res/layout/simple_xy_plot_example.xml #generated:21
+# view res/layout/step_chart_example.xml #generated:7
+# view res/layout/time_series_example.xml #generated:23
+# view res/layout/touch_zoom_example.xml #generated:22
+# view res/layout/xy_plot_with_bq_img_example.xml #generated:11
+# view res/layout/xyregion_example.xml #generated:8
+-keep class com.androidplot.xy.XYPlot { <init>(...); }
+
+# view AndroidManifest.xml #generated:30
+-keep class com.pan.finales.BarPlotExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.pan.finales.DualScaleXYPlotExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.pan.finales.DynamicXYPlotActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.pan.finales.ListViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:11
+-keep class com.pan.finales.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.pan.finales.OrientationSensorExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class com.pan.finales.SimplePieChartActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class com.pan.finales.SimpleXYPlotActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.pan.finales.StepChartExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class com.pan.finales.TimeSeriesActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.pan.finales.TouchZoomExampleActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.pan.finales.XYPlotWithBgImgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:62
+-keep class com.pan.finales.XYRegionExampleActivity { <init>(...); }
+
+# onClick res/layout/xy_plot_with_bq_img_example.xml #generated:36
+-keepclassmembers class * { *** onGraphStyleToggle(...); }
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:background="@color/background"
+   android:layout_height="fill_parent"
+   android:layout_width="fill_parent"
+   android:fillViewport="true"
+   android:padding="30dip"
+   android:orientation="horizontal">
+   <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_gravity="top">
+      <TextView
+         android:text="@string/main_title"
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_gravity="top"
+         android:layout_marginBottom="25dip"
+         android:textSize="24.5sp" />
+      <Button
+         android:id="@+id/menuitem1_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem1_label" />
+      <Button
+         android:id="@+id/menuitem2_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem2_label" />
+      <Button
+         android:id="@+id/menuitem3_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem3_label" />
+       <Button android:id="@+id/menuitem5_button" 
+        android:layout_height="wrap_content" 
+        android:layout_width="fill_parent" 
+        android:text="@string/menuitem5_label"/>
+      <Button android:id="@+id/menuitem4_button" 
+         android:layout_height="wrap_content" 
+         android:layout_width="fill_parent" 
+         android:text="@string/menuitem4_label"/>
+      <Button
+         android:id="@+id/menuitem6_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem6_label" />
+      <Button
+         android:id="@+id/menuitem7_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem7_label" />
+      <Button
+         android:id="@+id/menuitem8_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem8_label" />
+      <Button
+         android:id="@+id/menuitem9_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem9_label" />
+      <Button
+         android:id="@+id/menuitem10_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem10_label" />
+      <Button
+         android:id="@+id/menuitem11_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/menuitem11_label" />         
+      <Button
+         android:id="@+id/exit_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/exit_label" />
+
+  </LinearLayout>
+</ScrollView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Bargraphs</string>
+    <string name="main_title">Choose your chart!</string>
+    <string name="menuitem1_label">Simple bar plot</string>
+    <string name="menuitem2_label">Double bar plot</string>
+    <string name="menuitem3_label">Group bars</string>
+    <string name="menuitem4_label">Floating bars</string>
+    <string name="menuitem5_label">Histogram plot</string>
+    <string name="exit_label">Exit</string>       
+<string name="menuitem7_label">Horizontal bars</string>
+    <string name="menuitem6_label">Vertical floating bars</string>
+    <string name="menuitem8_label">Horizontal bars</string>
+    <string name="menuitem10_label">Vertical bars</string>
+    <string name="menuitem9_label">Stacked bars</string>
+<string name="menuitem11_label">Bargraph/DatasetViewer</string>
+</resources>

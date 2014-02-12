@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Pizza</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tamapizza">Estas en el primer Activity\n
+        ¿de que tamaño quieres tu pizza?</string>
+    <string name="chic">CHICA</string>
+    <string name="med">MEDIANA</string>
+    <string name="gran">GRANDE</string>
+    <string name="como">¿como quieres la orilla?</string>
+    <string name="oricoque">orilla con queso</string>
+    <string name="oricoquechi">orilla con queso y chipotle</string>
+    <string name="orisique">orilla sin queso</string>
+    <string name="ingre">¿de que ingredientes quieres tu pizza?</string>
+    <string name="nompizza">¿a nombre de quien es la pizza?</string>
+    <string name="tel">¿cual es tu telefono?</string>
+    <string name="dir">¿cual es tu direccion?</string>
+    <string name="esnom">escribe tu nombre</string>
+    <string name="estel">escribe tu telefono</string>
+<string name="esdir">escribe tu direccion</string>
+    <string name="sa">segunda actividad</string>
+    <string name="imagen">Pizza</string>
+    <string name="title_activity_activity_dos">Segundo Activity</string>
+</resources>

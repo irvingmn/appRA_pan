@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.c_base.c_beam"
+    android:versionCode="20"
+    android:versionName="1.4.3">
+
+<uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="org.c_base.c_beam.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="org.c_base.c_beam.permission.C2D_MESSAGE" />
+
+    <permission
+            android:name="org.c_base.c_beam.permission.NOTIFICATION"
+            android:protectionLevel="normal" />
+
+    <uses-permission android:name="org.c_base.c_beam.permission.NOTIFICATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.c_base.c_beam.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="c-leuse.c-base.org"
+                    android:pathPrefix="/login"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="c-leuse.cbrp3.c-base.org"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.UserActivity"
+            android:label="@string/title_activity_user"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.EventActivity"
+            android:label="@string/title_activity_event"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.MissionActivity"
+            android:label="@string/title_activity_mission"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.MissionActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="org.c_base.c_beam" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="org.c_base.c_beam.GCMIntentService" />
+
+        <!--
+        Currently not working
+        <receiver android:name="org.c_base.c_beam.C_beamAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/c_beam_appwidget_info" />
+        </receiver>
+        -->
+
+        <activity android:name="org.c_base.c_beam.activity.AppWidgetConfigure" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.C_outActivity"
+            android:label="@string/title_activity_c_out"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.C_outActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.WebActivity"
+            android:label="@string/title_activity_web"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.WebActivity"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.ArtefactActivity"
+            android:label="@string/title_activity_artefact_long"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.ArtefactActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.C_PortalActivity"
+            android:label="@string/title_activity_c_portal"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.C_portalActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.BamActivity"
+            android:label="@string/title_activity_bam"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.MapActivity"
+            android:label="@string/title_activity_map"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.CcorderActivity"
+            android:label="@string/title_activity_ccorder"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity="org.c_base.c_beam.activity.CcorderActivity" >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+
+        </activity>
+        <activity
+            android:name="org.c_base.c_beam.activity.MissionDetailActivity"
+            android:label="@string/title_activity_mission_detail"
+            android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+
+        <receiver android:name="org.c_base.c_beam.NotificationBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="notification_cancelled" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="org.c_base.c_beam.activity.NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:taskAffinity="org.c_base.c_beam.activity.NotificationActivity" >
+        </activity>
+
+        <activity
+                android:name="org.c_base.c_beam.activity.CoreActivity"
+                android:label="@string/title_activity_core"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+
+        <activity
+                android:name="org.c_base.c_beam.activity.ComActivity"
+                android:label="@string/title_activity_com"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+                android:name="org.c_base.c_beam.activity.CienceActivity"
+                android:label="@string/title_activity_cience"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+                android:name="org.c_base.c_beam.activity.ClampActivity"
+                android:label="@string/title_activity_clamp"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+                android:name="org.c_base.c_beam.activity.CarbonActivity"
+                android:label="@string/title_activity_carbon"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+                android:name="org.c_base.c_beam.activity.CreactivActivity"
+                android:label="@string/title_activity_creactiv"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+        <activity
+                android:name="org.c_base.c_beam.activity.CultureActivity"
+                android:label="@string/title_activity_culture"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+
+        <activity
+                android:name="org.c_base.c_beam.activity.RingActivity"
+                android:label="@string/title_activity_ring"
+                android:parentActivityName="org.c_base.c_beam.activity.MainActivity"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="org.c_base.c_beam.activity.MainActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
