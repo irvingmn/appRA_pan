@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="drhm2" size="350.000000 118.861023" />
+    <ImageTarget name="DRHM" size="391.000000 106.351997" />
+  </Tracking>
+</QCARConfig>
